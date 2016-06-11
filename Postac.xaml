@@ -1,0 +1,20 @@
+﻿<Window x:Class="projekt_na_zaliczenie.Postac"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:projekt_na_zaliczenie"
+        mc:Ignorable="d"
+        Title="Menu - Stwórz Postać" Height="400" Width="410">
+    <Grid>
+        <Button x:Name="button" Content="Zagraj w Państwa i Miasta" HorizontalAlignment="Center" VerticalAlignment="Center" Width="167" Margin="63,179,62,54" Height="36" Click="button_Click"/>
+        <Button x:Name="button1" Content="Małpka" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="60" Margin="29,118,0,0" Click="button1_Click"/>
+        <Button x:Name="button2" Content="Lew" HorizontalAlignment="Center"  VerticalAlignment="Top" Width="68" Margin="165,118,159,0" Click="button2_Click" RenderTransformOrigin="0.5,0.5"/>
+        <Button x:Name="button3" Content="Rekin" HorizontalAlignment="Right"  VerticalAlignment="Top" Width="60" Margin="0,118,28,0" Click="button3_Click"/>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="71"  VerticalAlignment="Top" Width="74" Source="C:\Users\KacperN\Documents\Visual Studio 2015\Projects\projekt_na_zaliczenie\projekt_na_zaliczenie\malpka.jpg" IsEnabled="False" Margin="19,25,0,0"/>
+        <Image x:Name="image2" HorizontalAlignment="Center" Height="71"  VerticalAlignment="Top" Width="74" Margin="159,25,159,0" Source="C:\Users\KacperN\Documents\Visual Studio 2015\Projects\projekt_na_zaliczenie\projekt_na_zaliczenie\lew.jpg"/>
+        <Image x:Name="image3" HorizontalAlignment="Right" Height="71"  VerticalAlignment="Top" Width="74" Margin="0,25,19,0" Source="C:\Users\KacperN\Documents\Visual Studio 2015\Projects\projekt_na_zaliczenie\projekt_na_zaliczenie\rekin.gif"/>
+        <Label x:Name="label" Content="Wybierz Postać" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
+
+    </Grid>
+</Window>

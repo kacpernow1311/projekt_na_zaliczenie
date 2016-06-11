@@ -1,0 +1,84 @@
+﻿<Window x:Class="projekt_na_zaliczenie.Start"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:projekt_na_zaliczenie"
+        mc:Ignorable="d"
+        Title="PAŃSTWA I MIASTA" Height="400" Width="550" Background="White">
+    <Grid RenderTransformOrigin="0.506,0.549">
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\KacperN\Documents\Visual Studio 2015\Projects\projekt_na_zaliczenie\projekt_na_zaliczenie\tlo.jpg"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="1" Grid.Row="0" >
+            <TextBox Name="PanstwoTextBox"  Margin="5" Background="LightSteelBlue" Height="20"  />
+            <TextBox Name="MiastoTextBox" Margin="5" Background="LightSteelBlue" Height="20" />
+            <TextBox Name="RzeczTextBox" Margin="5" Background="LightSteelBlue" Height="20"/>
+            <TextBox Name="RoślinaTextBox"  Margin="5" Background="LightSteelBlue" Height="20"  />
+            <TextBox Name="ZwierzeTextBox" Margin="5" Background="LightSteelBlue" Height="20" />
+            <TextBox Name="ZawódTextBox" Margin="5" Background="LightSteelBlue" Height="20"/>
+            <TextBox Name="ImieTextBox" Margin="5" Background="LightSteelBlue" Height="20"/>
+        </StackPanel>
+        <StackPanel Grid.Column="3" Grid.Row="0" >
+            <TextBox Name="pkt1TextBox"  Margin="5" Background="LightSteelBlue" Height="20"  />
+            <TextBox Name="pkt2TextBox" Margin="5" Background="LightSteelBlue" Height="20" />
+            <TextBox Name="pkt3TextBox" Margin="5" Background="LightSteelBlue" Height="20"/>
+            <TextBox Name="pkt4TextBox"  Margin="5" Background="LightSteelBlue" Height="20"  />
+            <TextBox Name="pkt5TextBox" Margin="5" Background="LightSteelBlue" Height="20" />
+            <TextBox Name="pkt6TextBox" Margin="5" Background="LightSteelBlue" Height="20"/>
+            <TextBox Name="pkt7TextBox" Margin="5" Background="LightSteelBlue" Height="20"/>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="0" >
+            <Label Content="Państwo" Margin="2" HorizontalAlignment="Right"/>
+            <Label Content="Miasto" Margin="2" HorizontalAlignment="Right"/>
+            <Label Content="Rzecz" Margin="2" HorizontalAlignment="Right"/>
+            <Label Content="Roślina" Margin="2" HorizontalAlignment="Right"/>
+            <Label Content="Zwierze" Margin="2" HorizontalAlignment="Right"/>
+            <Label Content="Zawód" Margin="2" HorizontalAlignment="Right"/>
+            <Label Content="Imie" Margin="2" HorizontalAlignment="Right"/>
+        </StackPanel>
+        <StackPanel Grid.Column="2" Grid.Row="0" >
+            <Label Content="Punkty" Margin="2" HorizontalAlignment="Right"/>
+            <Label Content="Punkty" Margin="2" HorizontalAlignment="Right"/>
+            <Label Content="Punkty" Margin="2" HorizontalAlignment="Right"/>
+            <Label Content="Punkty" Margin="2" HorizontalAlignment="Right"/>
+            <Label Content="Punkty" Margin="2" HorizontalAlignment="Right"/>
+            <Label Content="Punkty" Margin="2" HorizontalAlignment="Right"/>
+            <Label Content="Punkty" Margin="2" HorizontalAlignment="Right"/>
+        </StackPanel>
+        <StackPanel Grid.Column="4" Grid.Row="0" >
+            <Button Name="button1" Content="Następna runda" Grid.Column="2" Background="LightSkyBlue" Height="30" Width="100" VerticalAlignment="Top" Margin="20" Click="button1_Click"/>
+            <Button Name="button2" Content="Wylosuj literę" Grid.Column="2" Background="LightSkyBlue" Height="30" Width="100" VerticalAlignment="Stretch" Margin="20" Click="button2_Click"/>
+            <Button Name="button3" Content="Podaj wynik i zakończ" Grid.Column="2" Background="LightSkyBlue" Height="30" VerticalAlignment="Stretch" Margin="10,20" Click="button3_Click"/>
+            <Label Name="label" Margin="2" HorizontalAlignment="Center"/>
+        </StackPanel>
+        <ListView Name="ListView1" Grid.Row="1" Grid.ColumnSpan="5">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Państwo" DisplayMemberBinding="{Binding Panstwo}" />
+                    <GridViewColumn Header="Miasto" DisplayMemberBinding="{Binding Miasto}" />
+                    <GridViewColumn Header="Rzecz" DisplayMemberBinding="{Binding Rzecz}"/>
+                    <GridViewColumn Header="Roślina" DisplayMemberBinding="{Binding Roślina}" />
+                    <GridViewColumn Header="Zwierze" DisplayMemberBinding="{Binding Zwierze}" />
+                    <GridViewColumn Header="Zawód" DisplayMemberBinding="{Binding Zawód}"/>
+                    <GridViewColumn Header="Imie" DisplayMemberBinding="{Binding Imie}"/>
+                    <GridViewColumn Header="Suma" DisplayMemberBinding="{Binding suma}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+
+    </Grid>
+</Window>
